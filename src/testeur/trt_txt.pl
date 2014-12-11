@@ -172,7 +172,7 @@ while ( $line = <F> ) {
     $line =~ s/\r\n|\r$//;
     #$line =~ s/\x0D\x0A$//;
     chomp $line;
-    @champs_1 = split $separateur, $line;
+    @champs_1 = split $separateur, $line; # revoir cette ligne pour ajouter le support des quotes
     foreach $l (@champs_1) {
         $champs[ ++$#champs ] = uc($l);
     }
